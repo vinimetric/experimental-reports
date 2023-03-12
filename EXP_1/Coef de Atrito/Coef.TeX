@@ -1,0 +1,192 @@
+%https://www.overleaf.com/read/jvcvwmfpmxtj
+
+%Template da SBC para artigos em português
+
+\documentclass[12pt]{article}
+\usepackage{parskip}
+\usepackage{sbc-template}
+\usepackage{graphicx,url}
+\usepackage[utf8]{inputenc}	
+\usepackage[brazil]{babel}
+%\usepackage[latin1]{inputenc}  
+\usepackage{array}
+\usepackage{multirow}
+% Pacotes de matemática
+% ---
+%\usepackage
+\usepackage{float} %% COLOCAR H para ARRUMAR AS TABELAS
+
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\numberwithin{equation}{section} % Formato da referencia das eq.(Sesção - Equação)
+\usepackage{hyperref}
+% ---
+% ---
+
+\sloppy
+
+\begin{document}
+
+
+\title{DETERMINAÇÃO DO COEFICIENTE DE ATRITO ESTÁTICO ($ \mu_{e} $) PARA ANÁLISE DA INDEPENDÊNCIA COM A MASSA EM UM PLANO INCLINADO}
+\author{Vinícius T. Castellani\inst{1} Matheus F. Rodrigues\inst{2} } 
+\maketitle 
+
+\begin{resumo} 
+
+Através do experimento do plano inclinado, determinaremos o coeficiente de atrito estático de objetos com massas diferentes e, por meio do ângulo formado em relação à horizontal na eminência do movimento, analisaremos a existência de dependência entre coeficiente de atrito e massa. O experimento foi realizado cinco vezes para cada objeto de massas diferentes e escolhemos os ângulos médios $\overline{\theta}_{k}$ para realizar os cálculos. Encontramos, através do cálculo da incerteza do $\mu_{e}$, utilizando propagação de incertezas, que não há necessidade de determinar a massa do objeto para relacionar com $\mu_{e}$ pois esses valores se encontram muito próximos. Assim, concluímos que não há relação, portanto massa e coeficiente atrito estático são independentes.
+
+\end{resumo}
+
+\section{Introdução}
+
+A Força de contato entre dois corpos sólidos é chamada de força de atrito $\vec{F_{a}}$, atua tangencialmente à superfície de contato. Esse fenômeno é extremamente complicado,  dependendo fortemente do estado das superfícies em contato: grau de polimento, oxidação, camada fluida (NUSSENZVEIG).
+
+O coeficiente de atrito estático, que iremos buscar, é determinado quando as superfícies em contato encontram-se em iminência de movimento relativo, mas ainda não se moveram, representado por  $\mu_{e}$.
+
+Nosso objetivo é analisar se $\mu_{e}$ depende da massa do objeto, para isso utilizaremos blocos com pesos diferentes em um plano inclinado a um ângulo $\theta$ (Fig. 
+ \ref{fig:Forces}) e buscaremos relações por meio da propagação de incerteza. 
+
+\section{Embasamento teórico }
+
+Como queremos determinar o coeficiente de atrito estático, o bloco deve estar em repouso para que obtenhamos o ângulo máximo na eminência do movimento, com isso, pelas leis de newton, as somas das forças vetoriais aplicadas sobre o bloco devem ser zero, dessa forma: 
+
+\begin{equation}
+\label{eq2}
+\sum_{}^{}\vec{F}=\vec{0} \,.
+\end{equation}
+
+Portanto, obtemos as seguintes relações das forças representadas na   \hyperref[fig:Forces]{Figura \ref{fig:Forces} }
+\begin{equation}
+\label{eq1}
+\begin{matrix}F_{e}=P\cdot \sin{(\theta)}
+ \\
+F_{N}=P\cdot \cos{(\theta)}
+\end{matrix}  \,.
+\end{equation}
+
+$F_{e}$ é a força de atrito máxima, na eminência do movimento, para qual o bloco começa a se mover, ela é proporcional ao módulo da força normal de contato $|\vec{N}|$ entre as duas superfícies sendo também independente da área de contato, por uma constante:
+
+\begin{equation}
+\label{fat}
+|F_{a}|_{max} = F_{e} = \mu_{e} F_{N} \,.
+\end{equation}
+
+
+essa relação se deve aos estudos da tribologia. 
+
+Relacionando Eq. \eqref{fat} e Eq. \eqref{eq1} encontramos o modelo matemático:
+
+
+\begin{equation}
+\label{mu}
+\mu_{e}=\tan(\theta) \,,
+\end{equation}
+
+nos fornecendo um procedimento para medir o coeficiente de atrito estático, onde $\theta$ é o ângulo crítico do plano com a horizontal para o qual o bloco está na iminência de deslizar.
+
+\begin{figure}[ht]
+\centering
+\includegraphics[width=.5\textwidth]{Figures/He.PNG}
+\caption{Representação das forças}
+\label{fig:Forces}
+\end{figure}
+
+\section{Materiais Utilizados}
+
+Lista de materiais utilizados no experimento:
+ \begin{enumerate}
+    \item Plano Inclinado
+    \item Transferidor $(\pm 0.5^\circ)$
+    \item Bloco $(102.60 \pm 0.05)g$
+    \item 4 Pesos $(100.00 \pm 0.05)g$
+    \item Balança $(\pm 0.05g)$
+
+ \end{enumerate}
+\section{Procedimentos}
+%subsection
+Para a realização do experimento, o plano inclinado era móvel (Fig. \ref{fig:foto}), possibilitando serem feitos ajustes finos no seu ângulo em relação a horizontal. Um dos membros puxava lentamente o plano até o bloco se mexer, enquanto o outro analisava e anotava o ângulo no momento do movimento. A análise do ângulo foi possível por que havia um transferidor instalado na ponta do plano. Foram feitos 5 amostras com 5 pesos diferentes, 202,60kg, 303,60kg, 402,60, 502,60kg e 595,93kg.
+O ângulo encontrado é aproximado, visto que a obtenção das medidas ocorreu quando o objeto começou a deslizar
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=.5\textwidth]{Figures/foto.jpg}
+\caption{Plano inclinado móvel}
+\label{fig:foto}
+\end{figure}
+
+\section{Dados Experimentais}
+
+\begin{table}[H]
+\centering
+\begin{tabular}{|c|c|ccccc|c|c|}
+\hline
+\multirow{2}{*}{k} & \multirow{2}{*}{Massa (g)} & \multicolumn{5}{c|}{$\theta$ (º)}                                                                                    & \multirow{2}{*}{$\overline{\theta}_{k}$  (º)} & \multirow{2}{*}{$\sigma_{\theta}$} \\ \cline{3-7}
+                   &                            & \multicolumn{1}{c|}{1}    & \multicolumn{1}{c|}{2}    & \multicolumn{1}{c|}{3}    & \multicolumn{1}{c|}{4}    & 5    &                                      &                                    \\ \hline
+1                  & 202,60                     & \multicolumn{1}{c|}{11,5} & \multicolumn{1}{c|}{12,0} & \multicolumn{1}{c|}{12,1} & \multicolumn{1}{c|}{11,0} & 11,4 & 11.6                                 & 0.45276                            \\ \hline
+2                  & 303,60                     & \multicolumn{1}{c|}{11,0} & \multicolumn{1}{c|}{11,0} & \multicolumn{1}{c|}{11,1} & \multicolumn{1}{c|}{10,9} & 11,5 & 11.1                                 & 0.23452                            \\ \hline
+3                  & 402,60                     & \multicolumn{1}{c|}{10,2} & \multicolumn{1}{c|}{11,0} & \multicolumn{1}{c|}{10,5} & \multicolumn{1}{c|}{10,0} & 10,0 & 10.3                                 & 0.42190                            \\ \hline
+4                  & 502,60                     & \multicolumn{1}{c|}{10,5} & \multicolumn{1}{c|}{10,5} & \multicolumn{1}{c|}{10,7} & \multicolumn{1}{c|}{11,0} & 10,9 & 10.7                                 & 0.22803                            \\ \hline
+5                  & 595.93                     & \multicolumn{1}{c|}{11,0} & \multicolumn{1}{c|}{11,5} & \multicolumn{1}{c|}{11,2} & \multicolumn{1}{c|}{10,9} & 11,1 & 11.1                                 & 0.23021                            \\ \hline
+\end{tabular}
+\caption{Ângulos obtidos experimentalmente}
+\label{table1}
+\end{table}
+
+\section{Análise dos Dados}\label{sec:figs}
+
+Por meio do método de propagação de incertezas via derivadas:
+
+\begin{equation}
+\label{der}
+u^2=\sum_{i=1}^{n}\left[\frac{\partial f}{\partial x_{i}}\right]^2u_{x_{n}}^2    \,,
+\end{equation}
+
+e utilizando o modelo matemático encontrado Eq. \eqref{mu}, obtemos:
+
+\begin{equation}
+\label{ut}
+u_{\mu}=\sec^2(\theta) \cdot  u_{\theta}\,.
+\end{equation}
+
+Com o resultado da Eq. \eqref{ut} calculamos para todos os ângulos $\overline{\theta}$  a sua respectiva incerteza (tabela \ref{incerteza}).
+
+\begin{table}[H]
+\centering
+\begin{tabular}{|c|c|c|c|c|}
+\hline
+\multirow{2}{*}{k} & \multirow{2}{*}{Massa (g)} & \multirow{2}{*}{$\overline{\theta}$  (º)} & \multirow{2}{*}{$\mu_{e}$} & \multirow{2}{*}{$u_{\mu}$(Incerteza de $\mu_{e}$)} \\
+                   &                            &                                           &                            &                                         \\ \hline
+1                  & 202,60                     & 11.6                                      & 0.205                    & 0.009                                 \\ \hline
+2                  & 303,60                     & 11.1                                      & 0.196                    & 0.009                                 \\ \hline
+3                  & 402,60                     & 10.3                                     & 0.182                    & 0.009                                 \\ \hline
+4                  & 502,60                     & 10.7                                     & 0.189                    & 0.009                                 \\ \hline
+5                  & 595.93                     & 11.1                                     & 0.197                    & 0.009                                 \\ \hline
+\end{tabular}
+\caption{Incertezas dos coeficientes de atrito}
+\label{incerteza}
+\end{table}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=.7\textwidth]{Figures/error.png}
+\caption{Gráfico da relação entre $\mu_{e}$ e massa}
+\label{fig:graph}
+\end{figure}
+Percebemos que os valores de $\mu_{e}$ encontrados na tabela \ref{incerteza}, dentro da incerteza $ \mu_{e} \! \pm u_{\mu}$ (Figura \ref{fig:graph}) são muito próximos, a diferença entre elas é menor do que a incerteza experimental.
+
+Outra observação, as medidas $\mu_{e}$  que ficaram mais distante ($k_{1}$ e $k_{3}$) possuíram os maiores desvios padrões $\sigma_{\theta}$ (Tabela \ref{table1}), ou seja, as medidas foram mais dispersas e portanto menos confiáveis. Dado isso, as outras medidas, mais confiáveis, são praticamente as mesmas dado a suas incertezas, não tendo uma tendência. 
+
+\section{Conclusão}
+
+Assim, com base nos resultados obtidos, podemos concluir que não há evidência estatística suficiente para afirmar que o coeficiente de atrito estático depende da massa. No entanto, é importante destacar que a análise foi baseada em um conjunto limitado de dados e que outros fatores podem influenciar o coeficiente de atrito estático, como a textura, não uniformidade do plano e a composição da superfície em contato.
+
+\section{Referências}
+NUSSENZVEIG, H.M. Curso de física básica: Mecânica. 5.ed. São Paulo, SP: Edgard Blücher,
+2013. 87 p. 
+
+
+\end{document}
+
+
+Não obtivemos relação direta do coeficiente de atrito com a massa do objeto. 
